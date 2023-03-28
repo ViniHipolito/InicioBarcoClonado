@@ -9,7 +9,7 @@ var engine, world, backgroundImg;
 var canvas, angle, tower, towerImage, ground;
 
 //variável para o canhão(aluno)
-
+var barcoCanhao
 
 function preload() {
   backgroundImg = loadImage("./assets/background.gif");
@@ -36,10 +36,10 @@ function setup() {
   World.add(world, tower);
 
   //criar canhão baseado na classe Cannon
-
+barcoCanhao = new Cannon(180,110,130,100,angle);
 
   //definir ângulo
-
+angle = 20;
 }
 
 function draw() {
@@ -62,5 +62,5 @@ function draw() {
   pop();
 
   //exibição de canhão
-
+barcoCanhao.display();
 }
